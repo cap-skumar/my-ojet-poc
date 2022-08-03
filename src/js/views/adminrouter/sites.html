@@ -1,0 +1,120 @@
+<div id="SiteChildContent" style="width: 1px; min-width: 100%;">
+    <div id="train-container" class="oj-flex oj-sm-flex-direction-column">
+        <div class="oj-flex-item">
+            <oj-train
+                id="train"
+                class="demo-default-train"
+                selected-step="{{selectedStep}}"
+                steps="[[stepArray]]"
+                on-selected-step-changed="[[update]]">
+            </oj-train>
+        </div>
+        <div id="form-conf" class="oj-flex oj-flex-item">
+            <oj-bind-if test="[[selectedStep() === 'stp1']]">
+                <div class="oj-md-2"></div>
+                <div class="oj-md-8 site-info-container oj-panel">
+                    <oj-label-value label-edge="start">
+                        <oj-label  slot="label" for="firstfieldid">Search for Sites:</oj-label>
+                        <oj-input-text slot="value" required
+                        id="firstfieldid"
+                        value="{{name}}"
+                        autocomplete="off"
+                        label-hint="Name"
+                        validators="[[[regExpValidator]]]"></oj-input-text>
+                        
+                      </oj-label-value>
+                      <oj-label-value label-edge="start">
+                        <oj-label  slot="label" for="firstfieldid">Search for Sites:</oj-label>
+                        <oj-input-text slot="value" required
+                        id="firstfieldid"
+                        value="{{name}}"
+                        autocomplete="off"
+                        label-hint="Name"
+                        validators="[[[regExpValidator]]]"></oj-input-text>
+                        
+                      </oj-label-value>
+                      <oj-label-value label-edge="start">
+                        <oj-label  slot="label" for="firstfieldid">Search for Sites:</oj-label>
+                        <oj-input-text slot="value" required
+                        id="firstfieldid"
+                        value="{{name}}"
+                        autocomplete="off"
+                        label-hint="Name"
+                        validators="[[[regExpValidator]]]"></oj-input-text>
+                      </oj-label-value>
+                      <oj-label-value label-edge="start">
+                        <oj-label  slot="label" for="firstfieldid">Search for Sites:</oj-label>
+                        <oj-input-text slot="value" required
+                        id="firstfieldid"
+                        value="{{name}}"
+                        autocomplete="off"
+                        label-hint="Name"
+                        validators="[[[regExpValidator]]]"></oj-input-text>
+                      </oj-label-value>
+                      <oj-label-value label-edge="start">
+                        <oj-label  slot="label" for="firstfieldid">Search for Sites:</oj-label>
+                        <oj-input-text slot="value" required
+                        id="firstfieldid"
+                        value="{{name}}"
+                        autocomplete="off"
+                        label-hint="Name"
+                        validators="[[[regExpValidator]]]"></oj-input-text>
+                      </oj-label-value>
+                </div>
+            <div class="oj-md-2"></div>
+            </oj-bind-if>
+            <oj-bind-if test="[[selectedStep() === 'stp3']]">
+                
+                <div>
+                    <oj-button display="icons" class="oj-bg-neutral-30 oj-sm-margin-2x">
+                        <span slot="startIcon" class="oj-ux-ico-invoice-edit"></span>
+                    </oj-button>
+                    <oj-button display='icons' class="oj-bg-neutral-30 oj-sm-margin-2x">
+                        <span slot='endIcon' class="oj-ux-ico-delete-all"></span>
+                    </oj-button>
+                </div>
+                <div id="tableContainer" class="oj-flex-item oj-sm-padding-2x-horizontal oj-sm-align-self-center">
+            <oj-table
+                id="table"
+                aria-label="Departments Table"
+                accessibility.row-header="depName"
+                class="shiping-table-container oj-helper-text-align-center"
+                data="[[shipDataProvider]]"
+                selection-mode='{"row": "multiple", "column": "multiple"}'
+                columns='[{"headerText": "Shipment Id", "field": "shipment_id", "id": "shipID"},
+                        {"headerText": "Sites", "field": "site", "id": "siteName"},
+                        {"headerText": "Status", "field": "status", "id": "statusInfo"},
+                        {"headerText": "Created Date", "field": "created_date", "id": "createDateID"},
+                        {"headerText": "Ship Date", "field": "ship_date", "id": "shipDateID"},
+                        {"headerText": "Tracking No", "field": "tracking_no", "id": "trackingID"}]'
+
+                scroll-policy="loadMoreOnScroll"
+                scroll-policy-options='{"fetchSize": 5}'
+                first-selected-row="{{firstSelected}}"
+                on-first-selected-row-changed="[[firstSelectedRowChangedListener]]"></oj-table>
+            </div>
+            </oj-bind-if>
+
+        </div>
+        
+        <div class="oj-flex oj-flex-item oj-sm-align-self-center">
+            <oj-button
+                id="prevID">
+                Prev
+            </oj-button>
+            <oj-bind-if test="[[selectedStep() !== 'stp1']]">
+                <oj-button
+                id="cancelID">
+                Cancel
+            </oj-button>
+            </oj-bind-if>
+            <oj-bind-if test="[[selectedStep() !== 'stp4']]">
+                <oj-button
+                    id="nextID">Next
+                </oj-button>
+            </oj-bind-if>
+        </div>
+       
+
+    </div>
+</div>

@@ -1,0 +1,41 @@
+[{
+    "kit_id":"1",
+    "kit_name":"Kit A",
+    "kit_description":"",
+    "kit_distribution":"Blinded",
+    "kit_storage":"",
+    "kit_count":"",
+    "kit_unit":""
+  },{
+    "kit_id":"2",
+    "kit_name":"Kit B",
+    "kit_description":"",
+    "kit_distribution":"Blinded",
+    "kit_storage":"",
+    "kit_count":"",
+    "kit_unit":""
+  },{
+    "kit_id":"3",
+    "kit_name":"Kit C",
+    "kit_description":"",
+    "kit_distribution":"Unblinded",
+    "kit_storage":"",
+    "kit_count":"",
+    "kit_unit":""
+  },{
+    "kit_id":"4",
+    "kit_name":"Kit D",
+    "kit_description":"",
+    "kit_distribution":"Blinded",
+    "kit_storage":"",
+    "kit_count":"",
+    "kit_unit":""
+  },{
+    "kit_id":"5",
+    "kit_name":"Kit E",
+    "kit_description":"",
+    "kit_distribution":"Unblinded",
+    "kit_storage":"",
+    "kit_count":"1",
+    "kit_unit":"1"
+  }]

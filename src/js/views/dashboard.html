@@ -1,0 +1,40 @@
+<!--
+ Copyright (c) 2014, 2022, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+    <h6>Subject Details Page</h6>
+    <oj-form-layout max-columns="2" direction="row">
+      <div>Visit Date</div>
+      <oj-input-date id="inputdate" autocomplete="off" value="{{dateVal}}" label-hint="DD-MMM-YYY"></oj-input-date>
+      <div>Subject Name</div>
+      <oj-input-text value="{{fName}}" label-hint="Subject Name"></oj-input-text>
+      <div>Subject Weight</div>
+      <oj-input-number id="subjectWeight" value="{{subjectWeightVal}}" max="120" min="45" step="2" label-hint="Weight">
+      </oj-input-number>
+      <div>Date when subject has taken the last medication?</div>
+      <oj-input-date-time id="inputdatetime" autocomplete="off" value="{{dateTimeVal}}" label-hint="DD-MMM-YYY HH:MM">
+      </oj-input-date-time>
+      <div>Subject Gender</div>
+      <div>
+        <oj-radioset id="genderID" label-hint="Gender" value="{{genderVal}}">
+          <oj-option value="Male">Male</oj-option>
+          <oj-option value="Female">Female</oj-option>
+          <oj-option value="Other">Other</oj-option>
+        </oj-radioset>
+      </div>
+      <div>Subjet Number</div>
+      <div>
+        <oj-input-text id="phone" label-hint="Phone" value="{{phoneNumberValue}}"></oj-input-text>
+      </div>
+    <div class="oj-lg-justify-content-center" colspan="2">
+      <oj-button id="saveData" on-oj-action="[[saveSubjectData]]" >
+        Save Data
+      </oj-button>
+      <oj-button id="DeleteData"  on-oj-action="[[deleteSubjectData]]">
+        Delete Data
+      </oj-button>
+    </div>
+    </oj-form-layout>
+</div>

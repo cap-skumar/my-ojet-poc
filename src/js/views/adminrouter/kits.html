@@ -1,0 +1,64 @@
+<div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+    <div id="panelPage">
+        <div class="oj-flex">
+            <oj-button class="oj-panel">Create Kit Type</oj-button>
+            <oj-button class="oj-panel">Create Titration</oj-button>
+        </div>
+        <div class="oj-flex">
+        <oj-bind-for-each data="[[kitData]]">
+            <template>
+          <div class="oj-panel oj-sm-margin-2x demo-mypanel">
+            <div class="oj-flex oj-flex-item oj-bg-success-30">
+                <div class="oj-typography-body-md oj-typography-semi-bold oj-sm-align-self-center">Kit A</div>
+                <oj-button display="icons" class="oj-bg-neutral-30 oj-sm-margin-2x">
+                    <span slot="startIcon" class="oj-ux-ico-invoice-edit"></span>
+                </oj-button>
+                <oj-button display='icons' class="oj-bg-neutral-30 oj-sm-margin-2x">
+                    <span slot='endIcon' class="oj-ux-ico-delete-all"></span>
+                </oj-button>
+            </div>
+            <div class="oj-flex oj-sm-flex-direction-column">
+                <div class="oj-flex oj-flex-item">
+                    <div class="oj-typography-body-sm">Distribution:</div>
+                    <div class="oj-typography-body-sm oj-typography-semi-bold oj-text-color-danger">
+                        <oj-bind-text value="[[$current.data.kit_distribution]]"></oj-bind-text>
+                    </div>
+                </div>
+                <div class="oj-flex oj-flex-item">
+                    <div class="oj-typography-body-sm">Description:</div>
+                    <div class="oj-typography-body-sm oj-typography-semi-bold">
+                        <oj-bind-text value="[[discriptionValue]]"></oj-bind-text>
+                    </div>
+                </div>
+                <div class="oj-flex oj-flex-item">
+                    <div class="oj-typography-body-sm">Storage:</div>
+                    <div class="oj-typography-body-sm oj-typography-semi-bold">
+                        <oj-bind-text value="[[storageValue]]"></oj-bind-text>
+                    </div>
+                </div>
+                <div class="oj-flex oj-flex-item">
+                    <div class="oj-typography-body-sm">Type:</div>
+                    <div class="oj-typography-body-sm oj-typography-semi-bold">
+                        <oj-bind-text value="[[typeValue]]"></oj-bind-text>
+                    </div>
+                </div>
+                <div class="oj-flex oj-flex-item">
+                    <div class="oj-typography-body-sm">Min Kits to Ship:</div>
+                    <div class="oj-typography-body-sm oj-typography-semi-bold">
+                        <oj-bind-text value="[[kitsCount]]"></oj-bind-text>
+                    </div>
+                </div>
+                <div class="oj-flex oj-flex-item">
+                    <div class="oj-typography-body-sm">Units Per Kit:</div>
+                    <div class="oj-typography-body-sm oj-typography-semi-bold">
+                        <oj-bind-text value="[[kitsUnitCount]]"></oj-bind-text>
+                    </div>
+                </div>
+            </div>
+            
+          </div>
+          </template>
+          </oj-bind-for-each>
+        </div>
+      </div>
+</div>
